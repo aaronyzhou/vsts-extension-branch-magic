@@ -1,0 +1,98 @@
+{
+  "manifestVersion": 1,
+  "id": "branch-magic",
+  "version": "0.1.1",
+  "name": "branch magic",
+  "scopes": [],
+  "description": "makes branches great",
+  "publisher": "aaronyzhou",
+  "galleryFlags": [
+    "Preview"
+  ],
+  "icons": {
+    "default": "static/images/logo.png"
+  },
+  "targets": [
+    {
+      "id": "Microsoft.VisualStudio.Services"
+    }
+  ],
+  "demands": [
+    "api-version/3.0"
+  ],
+  "tags": [
+    "Sample"
+  ],
+  "screenshots": [
+    {
+      "path": "static/images/screen1.png"
+    }
+  ],
+  "content": {
+    "license": {
+      "path": "license.md"
+    },
+    "details": {
+      "path": "overview.md"
+    }
+  },
+  "links": {
+    "getstarted": {
+      "uri": "https://bit.ly"
+    },
+    "support": {
+      "uri": "https://bit.ly"
+    },
+    "issues": {
+      "uri": "https://bit.ly"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "uri": "https://bit.ly"
+  },
+  "branding": {
+    "color": "rgb(220, 235, 252)",
+    "theme": "light"
+  },
+  "files": [
+    {
+      "path": "dist",
+      "addressable": true
+    },
+    {
+      "path": "static/images/logo.png",
+      "addressable": true
+    },
+    {
+      "path": "static/css/app.css",
+      "addressable": true
+    },
+    {
+      "path": "static/index.html",
+      "addressable": true
+    },
+    {
+      "path": "node_modules/vss-web-extension-sdk/lib",
+      "addressable": true,
+      "packagePath": "lib"
+    }
+    
+ 
+  ],
+  "categories": [
+    "Integrate"
+  ],
+  "contributions": [
+    {
+      "id": "branch-magic",
+      "targets": "ms.vss-code-web.git-branches-summary-grid-menu",
+      "type": "ms.vss-web.action",
+      "properties": {
+        "name": "branch magic",
+        "order": 100,
+        "uri": "static/index.html"
+      }
+    }
+  ]
+}
