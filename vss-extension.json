@@ -1,98 +1,75 @@
 {
-  "manifestVersion": 1,
-  "id": "branch-magic",
-  "version": "0.1.1",
-  "name": "branch magic",
-  "scopes": [],
-  "description": "makes branches great",
-  "publisher": "aaronyzhou",
-  "galleryFlags": [
-    "Preview"
-  ],
-  "icons": {
-    "default": "static/images/logo.png"
-  },
-  "targets": [
-    {
-      "id": "Microsoft.VisualStudio.Services"
-    }
-  ],
-  "demands": [
-    "api-version/3.0"
-  ],
-  "tags": [
-    "Sample"
-  ],
-  "screenshots": [
-    {
-      "path": "static/images/screen1.png"
-    }
-  ],
-  "content": {
-    "license": {
-      "path": "license.md"
+    "manifestVersion": 1,
+    "id": "branch-magic5",
+    "version": "0.1.11",
+    "name": "branch magic",
+    "scopes": ["vso.code_manage"],
+    "description": "branch magic",
+    "publisher": "aaronyzhou",
+    "icons": {
+        "default": "static/images/logo.png"
     },
-    "details": {
-      "path": "overview.md"
-    }
-  },
-  "links": {
-    "getstarted": {
-      "uri": "https://bit.ly"
+    "public": "false",
+    "targets": [
+        {
+            "id": "Microsoft.VisualStudio.Services"
+        }
+    ],
+    "tags": [
+        "Sample"
+    ],
+    "content": {
+        "details": {
+            "path": "overview.md"
+        }
     },
-    "support": {
-      "uri": "https://bit.ly"
+    "links": {
+        "home": {
+            "uri": "https://bit.ly"
+        },
+        "getstarted": {
+            "uri": "https://bit.ly"
+        },
+        "learn": {
+            "uri": "https://bit.ly"
+        },
+        "support": {
+            "uri": "https://bit.ly"
+        },
+        "repository": {
+            "uri": "https://bit.ly"
+        },
+        "issues": {
+            "uri": "https://bit.ly"
+        }
     },
-    "issues": {
-      "uri": "https://bit.ly"
-    }
-  },
-  "repository": {
-    "type": "git",
-    "uri": "https://bit.ly"
-  },
-  "branding": {
-    "color": "rgb(220, 235, 252)",
-    "theme": "light"
-  },
-  "files": [
-    {
-      "path": "dist",
-      "addressable": true
+    "branding": {
+        "color": "rgb(220, 235, 252)",
+        "theme": "light"
     },
-    {
-      "path": "static/images/logo.png",
-      "addressable": true
-    },
-    {
-      "path": "static/css/app.css",
-      "addressable": true
-    },
-    {
-      "path": "static/index.html",
-      "addressable": true
-    },
-    {
-      "path": "node_modules/vss-web-extension-sdk/lib",
-      "addressable": true,
-      "packagePath": "lib"
-    }
-    
- 
-  ],
-  "categories": [
-    "Integrate"
-  ],
-  "contributions": [
-    {
-      "id": "branch-magic",
-      "targets": "ms.vss-code-web.git-branches-summary-grid-menu",
-      "type": "ms.vss-web.action",
-      "properties": {
-        "name": "branch magic",
-        "order": 100,
-        "uri": "static/index.html"
+    "files": [
+        {
+            "path": "dist",
+            "addressable": true
+        },
+        {
+            "path": "static/index.html",
+            "addressable": true
+        }
+    ],
+    "categories": [
+        "Integrate"
+    ],
+    "contributions": [
+      {
+        "id": "branch-magic",
+        "targets": ["ms.vss-code-web.git-branches-summary-grid-menu","ms.vss-code-web.git-branches-tree-menu"],
+        "type": "ms.vss-web.action",
+        "properties": {
+          "name": "branch magic",
+          "order": 100,
+          "uri": "static/index.html"
+        }
       }
-    }
-  ]
+    ]
 }

@@ -1,28 +1,16 @@
  /// <reference types="vss-web-extension-sdk" />
 
-class Greeter {
-    element: HTMLElement;
-    span: HTMLElement;
-    timerToken: number;
-
-    constructor(element: HTMLElement) {
-        this.element = element;
-        this.element.innerHTML += "The time is: ";
-        this.span = document.createElement("span");
-        this.element.appendChild(this.span);
-        this.span.innerText = new Date().toUTCString();
+const actionProvider = {
+    getMenuItems: (context) => {
+        return [<IContributedMenuItem>{
+            icon: "fabric://BranchMerge",
+            title: "Merge Master",
+            action: (actionContext) => {
+                console.log("hi");
+            }
+        }];
     }
+};
 
-    start() {
-        this.timerToken = setInterval(() => this.span.innerHTML = new Date().toUTCString(), 500);
-    }
-
-    stop() {
-        clearTimeout(this.timerToken);
-    }
-
-}
-
-const el = document.getElementById("content");
-const greeter = new Greeter(el);
-greeter.start();
+// Register context menu action provider
+VSS.register(VSS.getContribution().id, actionProvider);
