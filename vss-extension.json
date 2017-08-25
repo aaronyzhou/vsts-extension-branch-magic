@@ -2,9 +2,9 @@
     "manifestVersion": 1,
     "id": "branch-magic5",
     "version": "0.1.44",
-    "name": "branch magic",
+    "name": "Branch Magic",
     "scopes": ["vso.code_manage"],
-    "description": "branch magic",
+    "description": "Merge master into your local branch from a pull request.",
     "publisher": "aaronyzhou",
     "icons": {
         "default": "static/images/logo.png"
@@ -16,7 +16,7 @@
         }
     ],
     "tags": [
-        "Sample"
+        "pull request", "branch", "code"
     ],
     "content": {
         "details": {
@@ -25,22 +25,22 @@
     },
     "links": {
         "home": {
-            "uri": "https://bit.ly"
+            "uri": "https://github.com/aaronyzhou/vsts-extension-branch-magic"
         },
         "getstarted": {
-            "uri": "https://bit.ly"
+            "uri": "https://github.com/aaronyzhou/vsts-extension-branch-magic"
         },
         "learn": {
-            "uri": "https://bit.ly"
+            "uri": "https://github.com/aaronyzhou/vsts-extension-branch-magic"
         },
         "support": {
-            "uri": "https://bit.ly"
+            "uri": "https://github.com/aaronyzhou/vsts-extension-branch-magic"
         },
         "repository": {
-            "uri": "https://bit.ly"
+            "uri": "https://github.com/aaronyzhou/vsts-extension-branch-magic"
         },
         "issues": {
-            "uri": "https://bit.ly"
+            "uri": "https://github.com/aaronyzhou/vsts-extension-branch-magic"
         }
     },
     "branding": {
@@ -62,11 +62,11 @@
         }
     ],
     "categories": [
-        "Integrate"
+        "Code"
     ],
     "contributions": [
       {
-        "id": "barnch-mainch",
+        "id": "branch-magic-source-tree",
         "type": "ms.vss-web.action",
         "description": "branch magic",
         "targets": [
@@ -79,7 +79,7 @@
         }
       },
       {
-        "id": "barnch-mainch2",
+        "id": "branch-magic-pull-request-menu",
         "type": "ms.vss-web.action",
         "description": "branch magic",
         "targets": [

@@ -67,7 +67,7 @@ const pollMergeStatus = (pullReq: GitPullRequest) => {
         } else if (pr.mergeStatus === PullRequestAsyncStatus.NotSet || pr.mergeStatus === PullRequestAsyncStatus.Queued) {
             delay(this, 100, pollMergeStatus, [pr]);
         } else {
-            console.log("error");
+            alert("error");
             return;
         }
     });
