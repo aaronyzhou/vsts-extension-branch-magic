@@ -1,7 +1,9 @@
 {
   "scripts": {
-    "build": "npm run lint && npm run clean && npm run webpack",
-    "webpack" : "webpack --progress --colors --config webpack.config.js --output-path ./dist -p",
+    "copysdk": "xcopy /y node_modules\\vss-web-extension-sdk\\lib\\VSS.SDK.min.js lib\\VSS.SDK.min.js",
+    "build": "npm run copysdk && npm run clean && npm run webpack",
+    "webpack" : "webpack --progress --colors --config webpack.config.js --output-path ./dist",
+    "webpack-prod" : "webpack --progress --colors --config webpack.config.js --output-path ./dist -p",
     "postbuild": "npm run package",
     "package": "tfx extension create  --rev-version",
     "gallery-publish": "tfx extension publish --rev-version",

@@ -4,21 +4,22 @@
 <head>
     <meta charset="utf-8" />
     <title>TypeScript HTML App</title>
-    <link rel="stylesheet" href="css/app.css" type="text/css" />
     <script src="../lib/VSS.SDK.min.js"></script>
-    
 </head>
 <body>
     <script type="text/javascript">
         // Initialize the VSS sdk
         VSS.init({
+            explicitNotifyLoaded: true,
             usePlatformScripts: true,
             usePlatformStyles: true
         });
 
         // Wait for the SDK to be initialized
         VSS.ready(function () {
-            VSS.require(["dist/app"], function (app) {});
+            VSS.require(["dist/app"], function (app) {
+                VSS.notifyLoadSucceeded();
+            });
         });
     </script>
 

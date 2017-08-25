@@ -1,7 +1,7 @@
 {
     "manifestVersion": 1,
     "id": "branch-magic5",
-    "version": "0.1.11",
+    "version": "0.1.44",
     "name": "branch magic",
     "scopes": ["vso.code_manage"],
     "description": "branch magic",
@@ -49,6 +49,10 @@
     },
     "files": [
         {
+            "path": "lib",
+            "addressable": true
+        },
+        {
             "path": "dist",
             "addressable": true
         },
@@ -62,13 +66,29 @@
     ],
     "contributions": [
       {
-        "id": "branch-magic",
-        "targets": ["ms.vss-code-web.git-branches-summary-grid-menu","ms.vss-code-web.git-branches-tree-menu"],
+        "id": "barnch-mainch",
         "type": "ms.vss-web.action",
+        "description": "branch magic",
+        "targets": [
+            "ms.vss-code-web.source-tree-item-menu"
+        ],
         "properties": {
-          "name": "branch magic",
-          "order": 100,
-          "uri": "static/index.html"
+            "text": "branch magic",
+            "title": "ms.vss-code-web.branch-magic",
+            "uri": "static/index.html"
+        }
+      },
+      {
+        "id": "barnch-mainch2",
+        "type": "ms.vss-web.action",
+        "description": "branch magic",
+        "targets": [
+            "ms.vss-code-web.pull-request-action-menu"
+        ],
+        "properties": {
+            "text": "branch magic",
+            "title": "ms.vss-code-web.branch-magic",
+            "uri": "static/index.html"
         }
       }
     ]
